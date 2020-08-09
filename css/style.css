@@ -1,0 +1,200 @@
+/* Хедер */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background: url(../img/bg.png) top center / cover;
+    height: 100vh;
+    position: relative;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    width: 70%;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.logo span{
+    color: #4022a9;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.menu li{
+    font-size: 20px;
+    color: #fff;
+    padding-left: 45px;
+    text-decoration: none;
+}
+.menu li:hover{
+    color: #4022a9;
+    cursor: pointer;
+}
+h1{
+    font-size: 90px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.desc{
+    font-size: 30px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.arrow{
+    font-size: 50px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+/* Анимированный фон */
+.animatedBackground{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, red, orange, yellow, green, cyan, blue, purple);
+	background-size: 400%;
+	height: 100vh;
+	animation: bganim 5s ease infinite;
+}
+.animatedBackground-title{
+    font-size: 40px;
+	padding: 10px 15px;
+	border: 3px solid #fff;
+	color: #fff;
+	font-weight: bold;
+}
+@keyframes bganim{
+	0%{
+		background-position: top left;
+	}
+	50%{
+		background-position: bottom right;
+	}
+	100%{
+		background-position: top left;
+	}
+}
+/* Калькулятор */
+.calculatorSection{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: radial-gradient(#D3D3D3, #11120C);
+}
+.calc{
+    width: 320px;
+	box-shadow: 15px -10px 15px 5px rgba(0, 0, 0, 0.4);
+}
+.top{
+	width: 100%;
+	height: 70px;
+	background-color: #6D6E6A;
+	position: relative;
+}
+.bar{
+	position: absolute;
+	right: 20px;
+	height: 40px;
+	width: 1px;
+	background-color: #fff;
+	top: calc(50% - 20px);
+	display: block;
+}
+.none{
+	display: none;
+}
+.calculator{
+	display: flex;
+}
+.digits{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.digits div, .oper div{
+	width: 80px;
+	height: 80px;
+	background-color: #42433E;
+	color: #E32647;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	cursor: pointer;
+}
+.oper div{
+	height: 20%;
+	color: #56D8EF;
+}
+.digits div:hover, .oper div:hover{
+	background-color: #282923;
+	color: #fff;
+}
+.oper{
+	width: 100px;
+}
+.text{
+	position: absolute;
+	right: 20px;
+	font-size: 25px;
+	top: calc(50% - 20px);
+	padding: 5px;
+	color: #fff;
+}
+#del{
+	color: #AC80FF;
+}
+/* Случайный цвет */
+.randomColor{
+    height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ffffff;
+}
+.container{
+	width: 250px;
+	height: 300px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.6);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	background-color: #fff;
+}
+.textColor, .button{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.button{
+	color: #000;
+	cursor: pointer;
+	border: 2px solid #000;
+	border-radius: 30px;
+	padding: 5px 10px;
+}
