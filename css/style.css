@@ -35,8 +35,9 @@ header{
 .menu li{
     font-size: 20px;
     color: #fff;
-    padding-left: 45px;
+    margin-left: 45px;
     text-decoration: none;
+    text-align: center;
 }
 .menu li:hover{
     color: #4022a9;
@@ -46,6 +47,7 @@ h1{
     font-size: 90px;
     font-weight: bold;
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -54,6 +56,7 @@ h1{
 .desc{
     font-size: 30px;
     position: absolute;
+    text-align: center;
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
@@ -84,6 +87,7 @@ h1{
 	border: 3px solid #fff;
 	color: #fff;
 	font-weight: bold;
+	text-align: center;
 }
 @keyframes bganim{
 	0%{
@@ -197,4 +201,31 @@ h1{
 	border: 2px solid #000;
 	border-radius: 30px;
 	padding: 5px 10px;
+}
+/* Адаптация */
+@media screen and (max-width: 1300px){
+	h1{
+		font-size: 70px;
+	}
+	.header-top{
+		width: 90%;
+	}
+}
+@media screen and (max-width: 1050px){
+	h1{
+		font-size: 60px;
+	}
+	.desc{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 710px){
+	.menu{
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 435px){
+	.menu{
+		display: none;
+	}
 }
