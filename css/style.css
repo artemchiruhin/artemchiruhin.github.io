@@ -18,13 +18,10 @@ header{
     margin: 0 auto;
 }
 .logo{
-    font-size: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.logo span{
-    color: #4022a9;
+    width: 100px;
+    height: 100px;
+    background: url(../img/logo.svg);
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.7));
 }
 nav{
 	display: flex;
