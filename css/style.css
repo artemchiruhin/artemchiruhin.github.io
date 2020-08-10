@@ -2,7 +2,6 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 header{
@@ -27,10 +26,24 @@ header{
 .logo span{
     color: #4022a9;
 }
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .menu{
     display: flex;
     justify-content: space-between;
     list-style: none;
+    position: relative;
+    opacity: 0;
+  	transform: scaleX(0);
+  	transform-origin: right center;
+  	transition: .3s;
+}
+.menu_active{
+  	opacity: 1;
+  	transform: scaleX(1);
 }
 .menu li{
     font-size: 20px;
@@ -43,6 +56,46 @@ header{
     color: #4022a9;
     cursor: pointer;
 }
+.menu-btn{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-left: 20px;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after{
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 15px);
+}
+.menu-btn span::before,
+.menu-btn span::after{
+  content: '';
+  transition: .3s;
+}
+.menu-btn span::before{
+  transform: translateY(-7px);
+}
+.menu-btn span::after{
+  transform: translateY(7px);
+}
+.menu-btn_active span{
+  height: 0;
+}
+.menu-btn_active span::before{
+  transform: rotate(45deg);
+}
+.menu-btn_active span::after{
+  transform: rotate(-45deg);
+}
+
+
 h1{
     font-size: 90px;
     font-weight: bold;
@@ -236,10 +289,20 @@ footer{
 @media screen and (max-width: 710px){
 	.menu{
 		flex-direction: column;
+		position: absolute;
+		top: 100px;
+		right: 5%;
+		opacity: 0;
+  		transform: scaleY(0);
+  		transform-origin: top center;
+  		transition: .3s;
 	}
-}
-@media screen and (max-width: 435px){
-	.menu{
-		display: none;
+	.menu li{
+		margin-left: 0;
+	}
+	.menu_active{
+  	opacity: 1;
+  	transform: scaleY(1);
+
 	}
 }
