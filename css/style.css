@@ -91,8 +91,6 @@ nav{
 .menu-btn_active span::after{
   transform: rotate(-45deg);
 }
-
-
 h1{
     font-size: 90px;
     font-weight: bold;
@@ -113,13 +111,28 @@ h1{
     color: #fff;
 }
 .arrow{
-    font-size: 50px;
+    transform: translateX(-50%) rotate(45deg);
     position: absolute;
+    height: 3px;
+  	width: 30px;
+  	background-color: #fff;
+  	border-radius: 5px;
+  	position: absolute;
     top: 85%;
     left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
     cursor: pointer;
+}
+.arrow::after{
+	content: '';
+  	height: 3px;
+  	width: 30px;
+  	background-color: #fff;
+  	border-radius: 5px;
+ 	position: absolute;
+ 	left: -1px;
+ 	top: 1px;
+  	transform: rotate(90deg);
+  	transform-origin: right center;
 }
 /* Анимированный фон */
 .animatedBackground{
@@ -262,6 +275,10 @@ footer{
 	text-align: center;
 	color: #fff;
 	font-size: 20px;
+}
+.myName a{
+	text-decoration: none;
+	color: #fff;
 }
 .footer-text p{
 	margin-top: 10px;
