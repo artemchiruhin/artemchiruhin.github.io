@@ -48,6 +48,29 @@ nav{
     margin-left: 45px;
     text-decoration: none;
     text-align: center;
+    position: relative;
+}
+.menu li::before,
+.menu li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	bottom: -5px;
+	position: absolute;
+	background-color: #4022a9;
+	transition: .5s ease-in-out;
+}
+.menu li::before{
+	left: 0;
+}
+.menu li::after{
+	right: 0;
+}
+.menu li:hover::before{
+	width: 50%;
+}
+.menu li:hover::after{
+	width: 50%;
 }
 .menu li:hover{
     color: #4022a9;
