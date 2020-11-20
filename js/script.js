@@ -86,7 +86,7 @@ btn.onclick = function(){
 };
 
 // Scroll
-/*function scrollTo(element) {
+function scrollTo(element) {
 	window.scroll({
 		left: 0,
 		top: element.offsetTop,
@@ -105,11 +105,11 @@ let randomColorLink = document.querySelector('#randomColor-link');
 randomColorLink.addEventListener('click', () => {
 	scrollTo(document.querySelector('.randomColor'));
 });
-let arrow = document.querySelector('.arrow');
+/*let arrow = document.querySelector('.arrow');
 arrow.addEventListener('click', () => {
 	scrollTo(document.querySelector('.animatedBackground'));
-});
-*/
+});*/
+
 // Анимация
 gsap.timeline()
 .fromTo('.logo', 1, {opacity: 0, x: -300}, {opacity: 1, x: 0})
