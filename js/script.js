@@ -1,12 +1,12 @@
 // Меню
-let menuBtn = document.querySelector(".menu-btn");
+/*let menuBtn = document.querySelector(".menu-btn");
 let menu = document.querySelector(".menu");
 menuBtn.onclick = function(e){
   e.preventDefault();
   menuBtn.classList.toggle("menu-btn_active");
   menu.classList.toggle("menu_active");
 }
-
+*/
 
 // Калькулятор
 let text = document.querySelector(".text");
@@ -86,7 +86,7 @@ btn.onclick = function(){
 };
 
 // Scroll
-function scrollTo(element) {
+/*function scrollTo(element) {
 	window.scroll({
 		left: 0,
 		top: element.offsetTop,
@@ -109,3 +109,11 @@ let arrow = document.querySelector('.arrow');
 arrow.addEventListener('click', () => {
 	scrollTo(document.querySelector('.animatedBackground'));
 });
+*/
+// Анимация
+gsap.timeline()
+.fromTo('.logo', 1, {opacity: 0, x: -300}, {opacity: 1, x: 0})
+.fromTo('.menu', 1, {y: -120}, {y: 0}, '-=1')
+.fromTo('.phone', 1, {x: 300}, {x: 0}, '-=1')
+.fromTo('.leftSide', 1, {opacity: 0, x: -300}, {opacity: 1, x: 0})
+.fromTo('.rightSide', 1, {transform: 'scale(0)'}, {transform: 'scale(1)'});
