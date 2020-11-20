@@ -323,20 +323,27 @@ footer{
 	margin-top: 10px;
 }
 /* Адаптация */
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1210px){
 	h1{
 		font-size: 70px;
 	}
-	.header-top{
+	.top-header{
 		width: 90%;
+		justify-content: space-around;
+	}
+	.rightSide img{
+		transform: scale(0.7);
+	}
+	.content{
+		justify-content: space-around;
 	}
 }
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1075px){
 	h1{
 		font-size: 60px;
 	}
-	.desc{
-		font-size: 20px;
+	.rightSide img{
+		transform: scale(0.5);
 	}
 }
 @media screen and (max-width: 710px){
@@ -354,8 +361,8 @@ footer{
 		margin-left: 0;
 	}
 	.menu_active{
-  	opacity: 1;
-  	transform: scaleY(1);
+	  	opacity: 1;
+	  	transform: scaleY(1);
 
 	}
 }
