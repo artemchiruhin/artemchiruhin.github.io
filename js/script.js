@@ -5,8 +5,8 @@ menuBtn.onclick = function(e){
   e.preventDefault();
   menuBtn.classList.toggle("menu-btn_active");
   menu.classList.toggle("menu_active");
-}
-*/
+}*/
+
 
 // Калькулятор
 let text = document.querySelector(".text");
@@ -86,7 +86,7 @@ btn.onclick = function(){
 };
 
 // Scroll
-/*function scrollTo(element) {
+function scrollTo(element) {
 	window.scroll({
 		left: 0,
 		top: element.offsetTop,
@@ -105,11 +105,24 @@ let randomColorLink = document.querySelector('#randomColor-link');
 randomColorLink.addEventListener('click', () => {
 	scrollTo(document.querySelector('.randomColor'));
 });
-let arrow = document.querySelector('.arrow');
+let arrowUp = document.querySelector('.arrow-up');
+arrowUp.addEventListener('click', () => {
+	scrollTo(document.querySelector('header'));
+});
+/*let arrow = document.querySelector('.arrow');
 arrow.addEventListener('click', () => {
 	scrollTo(document.querySelector('.animatedBackground'));
-});
-*/
+});*/
+
+window.addEventListener('scroll', () => {
+	if(window.pageYOffset === 1000){
+		arrowUp.style.opacity = '1';
+		gsap.timeline().from('.arrow-up', 0.5, {x: -300});
+	}
+	if(window.pageYOffset < 1000){
+		arrowUp.style.opacity = '0';
+	}
+})
 // Анимация
 gsap.timeline()
 .fromTo('.logo', 1, {opacity: 0, x: -300}, {opacity: 1, x: 0})

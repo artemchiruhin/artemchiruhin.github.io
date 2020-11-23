@@ -322,6 +322,17 @@ footer{
 .footer-text p{
 	margin-top: 10px;
 }
+.arrow-up{
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+	background-color: #201747;
+	width: 40px;
+	text-align: center;
+	position: fixed;
+	left: 20px;
+	bottom: 50px;
+}
 /* Адаптация */
 @media screen and (max-width: 1210px){
 	h1{
