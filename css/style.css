@@ -303,6 +303,9 @@ h1{
 	border: 2px solid #000;
 	border-radius: 30px;
 	padding: 5px 10px;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
 }
 /* Футер */
 footer{
