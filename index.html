@@ -1,90 +1,167 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Чирухин Артём</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/icon.svg">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="js/script.js" defer></script>
+    <script src="js/before-after.js" defer></script>
+    <script src="js/drag-and-drop.js" defer></script>
+    <script src="js/hover-board.js" defer></script>
+    <script src="js/multistage-form.js" defer></script>
+    <script src="js/signin-form.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="top-header">
-                <div class="logo">web<span>art</span></div>
-                <ul class="menu">
-                    <li id="animatedBackground-link">Анимированный фон</li>
-                    <li id="calculator-link">Калькулятор</li>
-                    <li id="randomColor-link">Случайный цвет</li>
-                </ul>
-                <div class="phone"><i class="fas fa-phone-alt"></i>+7 (992) 208 35-63</div>
-            </div>
-            <div class="content">
-                <div class="leftSide">
-                    <h1>Студия WebArt</h1>
-                    <p>Лидер среди студий веб-разработки</p>
-                    <a href="#">Сделать заказ</a>
-                </div>
-                <div class="rightSide"><img src="img/picture.png" alt=""></div>
-            </div>
-        </div>
-    </header>
-    <section class="animatedBackground">
-        <h2 class="animatedBackground-title">Background gradient animation</h2>
+    <section class="first_section">
+    	<div class="container">	
+	    	<header class="header">
+	    		<nav>
+	    			<ul class="menu">
+	    				<li class="menu_item">
+	    					<a href="#second_section" class="menu_item__link">До/после</a>
+	    				</li>
+	    				<li class="menu_item">
+	    					<a href="#third_section" class="menu_item__link">Drag'n'drop</a>
+	    				</li>
+	    				<li class="menu_item">
+	    					<a href="#fourth_section" class="menu_item__link">Hover доска</a>
+	    				</li>
+	    				<li class="menu_item">
+	    					<a href="#fifth_section" class="menu_item__link">Многоэтапная форма</a>
+	    				</li>
+	    				<li class="menu_item">
+	    					<a href="#sixth_section" class="menu_item__link">Форма входа</a>
+	    				</li>
+	    			</ul>
+	    		</nav>
+	    	</header>
+	    	<div class="first_section__content">
+	    		<div>
+		    		<h1 class="title main_title"><span>Вторая</span> версия<br>моего сайта</h1>
+		    		<p>Адаптив будет когда-нибудь!</p>
+		    		<button class="button main_button">Посмотреть работы <i class="fas fa-arrow-down"></i></button>
+	    		</div>
+	    		<div class="contacts">
+	    			<a href="https://vk.com/artem09521" class="vkontakte"><i class="fab fa-vk"></i></a>
+	    			<a href="https://instagram.com/artem_09521" class="instagram"><i class="fab fa-instagram"></i></a>
+	    			<a href="https://github.com/artemchiruhin" class="github"><i class="fab fa-github"></i></a>
+	    		</div>
+	    	</div>
+    	</div>
     </section>
-    <section class="calculatorSection">
-        <div class="calc">
-            <div class="top">
-                <div class="text"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="calculator">
-                <div class="digits">
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>0</div>
-                    <div>.</div>
-                    <div id="equal">=</div>
-                </div>
-                <div class="oper">
-                    <div id="del">&lt;=</div>
-                    <div>/</div>
-                    <div>*</div>
-                    <div>-</div>
-                    <div>+</div>
-                </div>
-            </div>
-        </div>
+    <section class="second_section" id="second_section">
+    	<div class="container">
+    		<h2 class="title second_section__title">До/после</h2>
+    		<div class="slider">
+    			<div class="before">
+    				<img src="img/before.png" alt="До">
+    			</div>
+    			<div class="after">
+    				<img src="img/after.png" alt="После">
+    			</div>
+    			<div class="delimiter"></div>
+    		</div>
+    	</div>
     </section>
-    <section class="randomColor">
-        <div class="randomColor-container">   
-            <div class="textColor">#000000</div>
-            <div class="button">Get Random Color</div>
-        </div>
+    <section class="third_section" id="third_section">
+    	<div class="container">
+    		<h2 class="title third_section__title">Drag'n'drop</h2>
+    		<div class="current_image"></div>
+    		<div class="images">
+    			<div class="car" draggable="true">
+    				<img src="img/car2.png">
+    			</div>
+    			<div class="car" draggable="true">
+    				<img src="img/car3.png">
+    			</div>
+    			<div class="car" draggable="true">
+    				<img src="img/car4.png">
+    			</div>
+    		</div>
+    	</div>
     </section>
-    <footer>
-        <div class="footer-text">
-            <p class="myName"><a href="https://vk.com/artem09521" target="_blank">Чирухин Артём</a></p>
-            <p class="copyright">© 2020</p>
-            <p class="version">Version 1.3.5</p>
-            <p>
-				<a href="http://jigsaw.w3.org/css-validator/check/referer">
-			    	<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Правильный CSS!" />
-			    </a>
-			</p>
-        </div>
-    </footer>
-    <div class="arrow-up"><i class="fas fa-chevron-up"></i></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <section class="fourth_section" id="fourth_section">
+    	<div class="container">
+    		<h2 class="title fourth_section__title">Hover доска</h2>
+			<div class="board_wrapper">
+				<div class="board"></div>
+			</div>
+    	</div>
+    </section>
+    <section class="fifth_section" id="fifth_section">
+    	<div class="container">
+    		<h2 class="title fifth_section__title">Многоэтапная форма</h2>
+    		<form class="fifth_section__form">
+    			<div class="personal_data form_block">
+    				<div class="last_name">
+    					<label for="last_name__input">Фамилия</label>
+    					<input type="text" id="last_name__input">
+    				</div>
+    				<div class="first_name">
+    					<label for="first_name__input">Имя</label>
+    					<input type="text" id="first_name__input">
+    				</div>
+    				<div class="patronymic">
+    					<label for="patronymic__input">Отчество</label>
+    					<input type="text" id="patronymic__input">
+    				</div>
+    				<div class="buttons">
+    					<button class="button to_second_from_first">Далее <i class="fas fa-arrow-right"></i></button>
+    				</div>
+    			</div>
+    			<div class="contacts_data form_block closed">
+    				<div class="phone">
+    					<label for="phone__input">Телефон</label>
+    					<input type="text" id="phone__input">
+    				</div>
+    				<div class="email">
+    					<label for="email__input">Email</label>
+    					<input type="text" id="email__input">
+    				</div>
+    				<div class="buttons">
+    					<button class="button to_first_from_second arrow_button"><i class="fas fa-arrow-left"></i></button>
+    					<button class="button to_third_from_second">Далее <i class="fas fa-arrow-right"></i></button>
+    				</div>
+    			</div>
+    			<div class="address_data form_block closed">
+    				<div class="address">
+    					<label for="address__input">Адрес</label>
+    					<input type="text" id="address__input">
+    				</div>
+    				<div class="buttons">
+    					<button class="button to_second_from_third arrow_button"><i class="fas fa-arrow-left"></i></button>
+    					<button class="button to_first_stage">Отправить</i></button>
+    				</div>
+    			</div>
+    		</form>
+    	</div>
+    </section>
+    <section class="sixth_section" id="sixth_section">
+    	<div class="container">
+    		<h2 class="title sixth_section__title">Форма входа</h2>
+    		<div class="signin_form">
+    			<div class="signin_form__image">
+    				<img src="img/picture.png" alt="">
+    			</div>
+    			<form>
+    				<div class="form-group login">
+    					<label for="login__input">Логин</label>
+    					<input type="text" id="login__input" placeholder="Логин">
+    				</div>
+    				<div class="form-group password">
+    					<label for="password__input">Пароль</label>
+    					<input type="password" id="password__input" placeholder="Пароль">
+    				</div>
+    				<button class="button signin_button">Войти</button>
+    			</form>
+    		</div>
+		</div>
+    </section>
 </body>
 </html>
