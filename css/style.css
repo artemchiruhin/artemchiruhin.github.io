@@ -240,35 +240,44 @@ label {
 	color: #A163F7;
 	text-shadow: #A163F7 0px 0px 100px;
 }
-.fifth_section__form {
-	max-width: 700px;
+.form_wrapper {
 	margin: 0 auto;
+	max-width: 700px;
+	height: 500px;
+	border: 1px solid #A163F7;
+	border-radius: 22.5px;
+}
+.fifth_section__form {
+	max-width: 400px;
+	margin: 100px auto 0 auto;
+}
+.tabs {
 	display: flex;
 	justify-content: center;
-	border: 1px solid #A163F7;
-	margin-top: 200px;
-	position: relative;
+	margin-bottom: 10px;
 }
-.form_block {
-	padding: 30px 15px 20px 15px;
-	width: 33%;
-	position: relative;
+.tab {
+	padding: 10px 7px;
+	margin-right: 15px;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	color: #A163F7;
 }
-.closed::before {
-	content: '';
-	width: 100%;
-	height: 100%;
-	background: #000;
-	opacity: .4;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.tab:hover {
+	background-color: #A163F7;
+	color: #FEFFF1;
+}
+.tab:last-child {
+	margin-right: 0;
+}
+.active_tab {
+	background-color: #A163F7;
+	color: #FEFFF1;
 }
 .fifth_section__form input {
 	border-bottom: 1px solid #A163F7;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+	width: 100%;
 }
 .fifth_section__form label {
 	color: #A163F7;
@@ -276,6 +285,13 @@ label {
 .personal_data, .contacts_data, .address_data {
 	display: flex;
 	flex-direction: column;
+}
+.form_block {
+	display: none;
+}
+.active_block {
+	display: block;
+	animation: slide-in .5s ease-in-out;
 }
 .buttons {
 	margin-top: auto;
@@ -285,15 +301,26 @@ label {
 }
 .buttons button {
 	background: #A163F7;
-	padding: 5px 16px;
+	padding: 10px 25px;
 	font-size: 12px;
 }
 .arrow_button {
 	padding: 0 !important;
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	margin-right: auto;
 }
+
+@keyframes slide-in {
+	from {
+	  opacity: 0;
+	  transform: translateX(100px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0px);
+	}
+  }
 
 /* Шестая секция */
 .sixth_section {

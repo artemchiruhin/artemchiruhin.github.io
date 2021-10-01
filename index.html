@@ -97,49 +97,56 @@
     <section class="fifth_section" id="fifth_section">
     	<div class="container">
     		<h2 class="title fifth_section__title">Многоэтапная форма</h2>
-    		<form class="fifth_section__form">
-    			<div class="personal_data form_block">
-    				<div class="last_name">
-    					<label for="last_name__input">Фамилия</label>
-    					<input type="text" id="last_name__input">
-    				</div>
-    				<div class="first_name">
-    					<label for="first_name__input">Имя</label>
-    					<input type="text" id="first_name__input">
-    				</div>
-    				<div class="patronymic">
-    					<label for="patronymic__input">Отчество</label>
-    					<input type="text" id="patronymic__input">
-    				</div>
-    				<div class="buttons">
-    					<button class="button to_second_from_first">Далее <i class="fas fa-arrow-right"></i></button>
-    				</div>
-    			</div>
-    			<div class="contacts_data form_block closed">
-    				<div class="phone">
-    					<label for="phone__input">Телефон</label>
-    					<input type="text" id="phone__input">
-    				</div>
-    				<div class="email">
-    					<label for="email__input">Email</label>
-    					<input type="text" id="email__input">
-    				</div>
-    				<div class="buttons">
-    					<button class="button to_first_from_second arrow_button"><i class="fas fa-arrow-left"></i></button>
-    					<button class="button to_third_from_second">Далее <i class="fas fa-arrow-right"></i></button>
-    				</div>
-    			</div>
-    			<div class="address_data form_block closed">
-    				<div class="address">
-    					<label for="address__input">Адрес</label>
-    					<input type="text" id="address__input">
-    				</div>
-    				<div class="buttons">
-    					<button class="button to_second_from_third arrow_button"><i class="fas fa-arrow-left"></i></button>
-    					<button class="button to_first_stage">Отправить</i></button>
-    				</div>
-    			</div>
-    		</form>
+			<div class="form_wrapper">
+				<div class="tabs">
+					<div class="tab active_tab">Личные данные</div>
+					<div class="tab">Контактные данные</div>
+					<div class="tab">Адрес</div>
+				  </div>
+				<form class="fifth_section__form">
+					<div class="personal_data form_block active_block">
+						<div class="last_name">
+							<label for="last_name__input">Фамилия</label>
+							<input type="text" id="last_name__input">
+						</div>
+						<div class="first_name">
+							<label for="first_name__input">Имя</label>
+							<input type="text" id="first_name__input">
+						</div>
+						<div class="patronymic">
+							<label for="patronymic__input">Отчество</label>
+							<input type="text" id="patronymic__input">
+						</div>
+						<div class="buttons">
+							<button class="button to_second_from_first">Далее <i class="fas fa-arrow-right"></i></button>
+						</div>
+					</div>
+					<div class="contacts_data form_block">
+						<div class="phone">
+							<label for="phone__input">Телефон</label>
+							<input type="text" id="phone__input">
+						</div>
+						<div class="email">
+							<label for="email__input">Email</label>
+							<input type="text" id="email__input">
+						</div>
+						<div class="buttons">
+							<button class="button to_first_from_second arrow_button"><i class="fas fa-arrow-left"></i></button>
+							<button class="button to_third_from_second">Далее <i class="fas fa-arrow-right"></i></button>
+						</div>
+					</div>
+					<div class="address_data form_block">
+						<div class="address">
+							<label for="address__input">Адрес</label>
+							<input type="text" id="address__input">
+						</div>
+						<div class="buttons">
+							<button class="button to_second_from_third arrow_button"><i class="fas fa-arrow-left"></i></button>
+							<button class="button to_first_stage">Отправить</i></button>
+						</div>
+					</div>
+				</form>
+			</div>
     	</div>
     </section>
     <section class="sixth_section" id="sixth_section">
