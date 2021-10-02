@@ -36,27 +36,12 @@ input {
 label {
 	display: block;
 }
+.hidden {
+	display: none;
+}
 /* Первая секция */
 .first_section {
 	background: #6F88FC;
-	position: relative;
-	perspective: 300px;
-	overflow: hidden;
-}
-.first_section > div {
-	z-index: 1;
-	position: relative;
-}
-.first_section::before {
-	content: '';
-	width: 100%;
-	height: 80px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background: #A163F7;
-	z-index: 0;
-	transform: rotateX(70deg);
 }
 .menu {
 	list-style: none;
@@ -260,10 +245,10 @@ label {
 }
 .form_wrapper {
 	margin: 0 auto;
-	max-width: 700px;
-	height: 500px;
+	margin-top: 100px;
+	max-width: 550px;
+	height: 450px;
 	border: 1px solid #A163F7;
-	border-radius: 22.5px;
 }
 .fifth_section__form {
 	max-width: 400px;
@@ -271,12 +256,10 @@ label {
 }
 .tabs {
 	display: flex;
-	justify-content: center;
 	margin-bottom: 10px;
 }
 .tab {
-	padding: 10px 7px;
-	margin-right: 15px;
+	padding: 10px 15px;
 	cursor: pointer;
 	transition: .3s ease-in-out;
 	color: #A163F7;
@@ -389,4 +372,52 @@ label {
 	background: #6F88FC;
 	border-radius: 0;
 	padding: 10px 100px;
+}
+.sent {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 25px 0 rgba(0, 0, 0, .75);
+	position: relative;
+	margin-right: 100px;
+}
+.sent::before, div::after {
+	content: '';
+	background: #6F88FC;
+	position: absolute;
+	height: 3px;
+}
+.sent::before {
+	left: 50%;
+	top: 60%;
+	width: 0px;
+	transform: translate(-100%, -50%) rotate(40deg);
+	transform-origin: center right;
+	animation: anim1 1s forwards;
+}
+.sent::after {
+	left: 50%;
+	top: 60%;
+	width: 0px;
+	transform: translate(-100%, -50%) rotate(130deg);
+	transform-origin: right center;
+	animation: anim2 1s 1s forwards;
+}
+@keyframes anim1 {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 40px;
+	}
+}
+  
+@keyframes anim2 {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 70px;
+	}
 }
