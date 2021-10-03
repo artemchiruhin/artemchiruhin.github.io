@@ -338,11 +338,8 @@ label {
 	margin-top: 105px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	background: #fff;
-}
-.signin_form form {
-	padding: 0 67px;
 }
 .form-group {
 	position: relative;
@@ -380,7 +377,6 @@ label {
 	background: #fff;
 	box-shadow: 0 0 25px 0 rgba(0, 0, 0, .75);
 	position: relative;
-	margin-right: 100px;
 }
 .sent::before, div::after {
 	content: '';
@@ -403,6 +399,11 @@ label {
 	transform: translate(-100%, -50%) rotate(130deg);
 	transform-origin: right center;
 	animation: anim2 1s 1s forwards;
+}
+.signin_form > div:last-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 @keyframes anim1 {
 	from {
